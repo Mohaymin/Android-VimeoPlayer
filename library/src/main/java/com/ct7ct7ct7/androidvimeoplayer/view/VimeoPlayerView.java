@@ -427,4 +427,8 @@ public class VimeoPlayerView extends FrameLayout implements LifecycleObserver {
         this.videoId = videoId;
         this.initialize(enabledCache, videoId, null, null);
     }
+
+    public VimeoPlayer getVimeoPlayer() {
+        return vimeoPlayer;
+    }
 }
