@@ -55,7 +55,9 @@ public class DefaultControlPanelView {
         vimeoMenuButton = defaultControlPanelView.findViewById(R.id.vimeoMenuButton);
         vimeoFullscreenButton = defaultControlPanelView.findViewById(R.id.vimeoFullscreenButton);
         vimeoSeekBar = defaultControlPanelView.findViewById(R.id.vimeoSeekBar);
+        vimeoSeekBar.setVisibility(View.GONE);
         vimeoCurrentTimeTextView = defaultControlPanelView.findViewById(R.id.vimeoCurrentTimeTextView);
+        vimeoCurrentTimeTextView.setVisibility(View.GONE);
         vimeoThumbnailImageView = defaultControlPanelView.findViewById(R.id.vimeoThumbnailImageView);
         vimeoPlayButton = defaultControlPanelView.findViewById(R.id.vimeoPlayButton);
         vimeoPauseButton = defaultControlPanelView.findViewById(R.id.vimeoPauseButton);
@@ -64,7 +66,7 @@ public class DefaultControlPanelView {
         controlsRootView = defaultControlPanelView.findViewById(R.id.controlsRootView);
         vimeoPlayerMenu = new ViemoPlayerMenu(vimeoPlayerView.getContext());
 
-        vimeoSeekBar.setVisibility(View.INVISIBLE);
+//        vimeoSeekBar.setVisibility(View.INVISIBLE);
         vimeoPanelView.setVisibility(View.VISIBLE);
         vimeoShadeView.setVisibility(View.VISIBLE);
         vimeoThumbnailImageView.setVisibility(View.VISIBLE);
@@ -120,7 +122,7 @@ public class DefaultControlPanelView {
             @Override
             public void onPlaying(float duration) {
                 ended = false;
-                vimeoSeekBar.setVisibility(View.VISIBLE);
+//                vimeoSeekBar.setVisibility(View.VISIBLE);
                 vimeoPanelView.setBackgroundColor(Color.TRANSPARENT);
                 vimeoPauseButton.setVisibility(View.VISIBLE);
                 vimeoPlayButton.setVisibility(View.GONE);
